@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import { Menu } from './Menu';
-import { Table } from 'antd';
+import Exemplo from './Exemplo';
+import MyTable from './MyTable';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Menu</h1>
-        <Menu/>
-        
+        <Exemplo/>
       </header>
     </div>
   );
