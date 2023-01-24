@@ -37,11 +37,6 @@ const originData = [
     "attributes": ["gnocchi", "pesto", "manjericão"]
   }
 ];
-
-
-
-
-
 const EditableCell = ({
   editing,
   dataIndex,
