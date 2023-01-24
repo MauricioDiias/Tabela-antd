@@ -76,7 +76,7 @@ const EditableCell = ({
     </td>
   );
 };
-const Exemplo = () => {
+const Restaurante = () => {
   const [form] = Form.useForm();
   const [data, setData] = useState(originData);
   const [editingKey, setEditingKey] = useState('');
@@ -133,7 +133,6 @@ const Exemplo = () => {
       title: 'Ingredientes',
       dataIndex: 'attributes',
       width: '40%',
-      editable: true,
       render: (text, record) => {
         console.log(text)
         return <Select
@@ -143,11 +142,8 @@ const Exemplo = () => {
             width: '100%',
           }}
           placeholder="Tags Mode"
-          onChange={(value) => handleTagChange(value, record.key)}
-          options={text.map((t) => ({
-            label: t,
-            value: t
-          }))}
+          onChange={()=>{}}
+          defaultValue={text.map((t)=>{return t})}
         />
          
       },
@@ -186,10 +182,7 @@ const Exemplo = () => {
       },
     },
   ];
-  const handleTagChange = (value, key) => {
-    // update the data with the new tags here
-    setData(prevData => prevData.map(item => item.key === key ? { ...item, tags: value } : item));
-  };
+ 
   const mergedColumns = columns.map((col) => {
     if (!col.editable) {
       return col;
@@ -224,4 +217,4 @@ const Exemplo = () => {
     </Form>
   );
 };
-export default Exemplo;
+export default Restaurante;
